@@ -41,16 +41,13 @@
             
                 $sql = "select * from expenses";
                 $stmt = mysqli_prepare($conn, $sql);
-        $res = mysqli_stmt_execute($stmt);
-        $data = [];
-        if($res){
-           $result = mysqli_stmt_get_result($stmt);
-            $data = mysqli_fetch_all($result, MYSQLI_ASSOC); 
-
-        }
-        
+                $res = mysqli_stmt_execute($stmt);
+                $data = [];
+                if($res){
+                $result = mysqli_stmt_get_result($stmt);
+                $data = mysqli_fetch_all($result, MYSQLI_ASSOC); 
+                }
                 ?>
-
                 <?php foreach($data as $col): ?>
                     <tr>
                         <td><?=$col['date']?></td>
