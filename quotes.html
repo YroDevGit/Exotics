@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .quote-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .quote {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #555;
+        }
+        .quotes-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .quotes {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="quote-container">
+        <div id="quote" class="quote">
+            <!-- Quote will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        const quote = "The best way to predict the future is to invent it.";
+       
+        function displayQuote(quote) {
+            const quoteDiv = document.getElementById('quote');
+            quoteDiv.textContent = `Quote of the Day: "${quote}"`;
+        }
+
+        // Display the quote
+        displayQuote(quote);
+    </script>
+
+<div class="quotes-container">
+    <div id="quotes" class="quotes">
+        <!-- Quote will be displayed here -->
+    </div>
+</div>
+
+<script>
+    const quotes = "“The bitterness of poor quality remains long after the sweetness of low price is forgotten.” – Benjamin Frankin.";
+   
+    function displayQuote(quotes) {
+        const quotesDiv = document.getElementById('quotes');
+        quotesDiv.textContent = `Quote of the Day: "${quotes}"`;
+    }
+
+    // Display the quote
+    displayQuote(quotes);
+</script>
+</body>
+</html>
